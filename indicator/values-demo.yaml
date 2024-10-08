@@ -1,0 +1,33 @@
+# Global Values
+global:
+  chartName: indicator-service
+# Charts Name
+indicator-service:
+  # Deployment
+  Deployment:
+    enabled: true
+    name: indicator-service
+    replicas: 1
+    imageRepository: 767398111444.dkr.ecr.eu-west-1.amazonaws.com/indicator-stats
+    imageTag: 0.1.0-440be74
+    configMap: indicator-service
+    strategy:
+      type: RollingUpdate
+      rollingUpdate:
+        maxSurge: "25%"
+        maxUnavailable: "25%"
+        # Health Check
+    healthCheck:
+      enabled: true
+      path: /indicator/health
+      port: 8006
+      # Expose Deployment Details
+    expose:
+      enabled: true
+      ports:
+        - port: 8006
+        - port: 8806
+  service:
+    enabled: true
+  hpa:
+    enabled: true

@@ -1,15 +1,15 @@
 apiVersion: v2
-description: The socket microservice helm chart for socket-service
+description: The indicator microservice helm chart for indicator-service
 keywords:
-  - socket-service
+  - indicator-service
 maintainers:
 - email: mjtech009@gmail.com
   name: Mukul Jariyal
-name: socket-service
+name: indicator-service
 appVersion: "0.1.0"
 version: 0.1.0
 dependencies:
   - name: Eterna-Application
     repository: file://../../Eterna-Application
     version: 0.1.0
-    alias: socket-service
+    alias: indicator-service
