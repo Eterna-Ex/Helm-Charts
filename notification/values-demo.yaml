@@ -1,0 +1,33 @@
+# Global Values
+global:
+  chartName: notification-service
+# Charts Name
+notification--service:
+  # Deployment
+  Deployment:
+    enabled: true
+    name: notification-service
+    replicas: 1
+    imageRepository: 767398111444.dkr.ecr.eu-west-1.amazonaws.com/notification-service
+    imageTag: 0.1.0-440be74
+    configMap: notification-service
+    strategy:
+      type: RollingUpdate
+      rollingUpdate:
+        maxSurge: "25%"
+        maxUnavailable: "25%"
+        # Health Check
+    healthCheck:
+      enabled: true
+      path: /notification/health
+      port: 8003
+      # Expose Deployment Details
+    expose:
+      enabled: true
+      ports:
+        - port: 8003
+        - port: 8803
+  service:
+    enabled: true
+  hpa:
+    enabled: true
