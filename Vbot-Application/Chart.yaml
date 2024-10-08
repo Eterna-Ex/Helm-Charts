@@ -1,0 +1,9 @@
+apiVersion: v2
+description: A Common Helm Chart for Eterna Application Applications
+keywords:
+- Eterna-Application
+maintainers:
+- email: mjtech009@gamil.com
+  name: Mukul Jariyal
+name: Eterna-Application
+version: 0.1.0

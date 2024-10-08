@@ -1,0 +1,15 @@
+apiVersion: v2
+description: The socket microservice helm chart for socket-service
+keywords:
+  - socket-service
+maintainers:
+- email: mjtech009@gmail.com
+  name: Mukul Jariyal
+name: socket-service
+appVersion: "0.1.0"
+version: 0.1.0
+dependencies:
+  - name: OPM-platform
+    repository: file://../../OPM-Platform
+    version: 0.1.0
+    alias: socket-service
