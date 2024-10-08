@@ -1,0 +1,15 @@
+apiVersion: v2
+description: The liquidation microservice helm chart for liquidation-service
+keywords:
+  - liquidation-service
+maintainers:
+- email: mjtech009@gmail.com
+  name: Mukul Jariyal
+name: liquidation-service
+appVersion: "0.1.0"
+version: 0.1.0
+dependencies:
+  - name: Eterna-Application
+    repository: file://../../Eterna-Application
+    version: 0.1.0
+    alias: liquidation-service

@@ -1,0 +1,33 @@
+# Global Values
+global:
+  chartName: liquidation-service
+# Charts Name
+liquidation-service:
+  # Deployment
+  Deployment:
+    enabled: true
+    name: liquidation-service
+    replicas: 1
+    imageRepository: 767398111444.dkr.ecr.eu-west-1.amazonaws.com/liquidation-service
+    imageTag: 0.1.0-440be74
+    configMap: liquidation-service
+    strategy:
+      type: RollingUpdate
+      rollingUpdate:
+        maxSurge: "25%"
+        maxUnavailable: "25%"
+        # Health Check
+    healthCheck:
+      enabled: true
+      path: /liquidation/health
+      port: 8002
+      # Expose Deployment Details
+    expose:
+      enabled: true
+      ports:
+        - port: 8002
+        - port: 8802
+  service:
+    enabled: true
+  hpa:
+    enabled: true
