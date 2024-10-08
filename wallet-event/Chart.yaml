@@ -1,0 +1,15 @@
+apiVersion: v2
+description: The wallet microservice helm chart for wallet-service
+keywords:
+  - wallet-service
+maintainers:
+- email: mjtech009@gmail.com
+  name: Mukul Jariyal
+name: wallet-service
+appVersion: "0.1.0"
+version: 0.1.0
+dependencies:
+  - name: Eterna-Application
+    repository: file://../../Eterna-Application
+    version: 0.1.0
+    alias: wallet-service
