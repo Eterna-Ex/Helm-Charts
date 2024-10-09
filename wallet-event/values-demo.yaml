@@ -7,11 +7,11 @@ wallet-service:
   # Deployment
   Deployment:
     enabled: true
-    name: wallet-service
+    name: wallet
     replicas: 1
     imageRepository: 767398111444.dkr.ecr.eu-west-1.amazonaws.com/wallet-event-service
     imageTag: 0.1.0-440be74
-    configMap: wallet-service
+    configMap: wallet
     strategy:
       type: RollingUpdate
       rollingUpdate:
@@ -32,6 +32,4 @@ wallet-service:
     enabled: true
   hpa:
     enabled: true
-wallet-event-service:
-  Deployment:
-    imageTag: 0.1.0-63bf6a5
+

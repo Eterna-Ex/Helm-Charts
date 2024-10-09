@@ -6,11 +6,11 @@ liquidation-service:
   # Deployment
   Deployment:
     enabled: true
-    name: liquidation-service
+    name: liquidation
     replicas: 1
     imageRepository: 767398111444.dkr.ecr.eu-west-1.amazonaws.com/liquidation-service
     imageTag: latest
-    configMap: liquidation-service
+    configMap: liquidation
     strategy:
       type: RollingUpdate
       rollingUpdate:
