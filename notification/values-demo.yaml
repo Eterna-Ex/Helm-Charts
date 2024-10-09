@@ -3,7 +3,7 @@ global:
   chartName: notification-service
 # Charts Name
 
-notification--service:
+notification-service:
   # Deployment
   Deployment:
     enabled: true
