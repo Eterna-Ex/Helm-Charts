@@ -15,7 +15,7 @@ spec:
 {{- range .Values.Deployment.expose.ports }}
   - name: "tcp-{{ .port }}"
     port: {{ .port }}
+{{- end }}
   selector:
     app: {{ .Values.Deployment.name }}
-{{- end }}
 {{- end }}
