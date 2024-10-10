@@ -10,7 +10,7 @@ ptop-service:
     name: ptop
     replicas: 1
     imageRepository: 767398111444.dkr.ecr.eu-west-1.amazonaws.com/ptop-service
-    imageTag: 0.1.0-0c8affd
+    imageTag: 0.1.0-2410d8b
     configMap: ptop
     strategy:
       type: RollingUpdate
