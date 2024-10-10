@@ -32,4 +32,6 @@ wallet-service:
     enabled: true
   hpa:
     enabled: true
-
+wallet-event-service:
+  Deployment:
+    imageTag: 0.1.0-63bf6a5
