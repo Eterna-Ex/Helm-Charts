@@ -11,7 +11,7 @@ liquidation-service:
     replicas: 1
     imageRepository: 767398111444.dkr.ecr.eu-west-1.amazonaws.com/liquidation-service
     imageTag: latest
-    configMap: liquidation
+    configMap: liq
     strategy:
       type: RollingUpdate
       rollingUpdate:
