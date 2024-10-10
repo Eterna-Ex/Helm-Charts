@@ -9,7 +9,7 @@ name: ptop-service
 appVersion: "0.1.0"
 version: 0.1.0
 dependencies:
-  - name: ptop-Application
+  - name: Eterna-Application
     repository: file://../Eterna-Application
     version: 0.1.0
     alias: ptop-service
