@@ -20,7 +20,7 @@ liquidation-service:
         # Health Check
     healthCheck:
       enabled: true
-      path: /liquidation/health
+      path: /health
       port: 8002
       # Expose Deployment Details
     expose:

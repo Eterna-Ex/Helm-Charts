@@ -20,14 +20,14 @@ ptop-service:
         # Health Check
     healthCheck:
       enabled: true
-      path: /ptop/health
-      port: 8004
+      path: /p2p/health
+      port: 8008
       # Expose Deployment Details
     expose:
       enabled: true
       ports:
-        - port: 8004
-        - port: 8804
+        - port: 8008
+        - port: 8808
   service:
     enabled: true
   hpa:
