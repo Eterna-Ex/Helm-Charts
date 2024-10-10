@@ -10,7 +10,7 @@ notification-service:
     name: notification
     replicas: 1
     imageRepository: 767398111444.dkr.ecr.eu-west-1.amazonaws.com/notification-service
-    imageTag: 0.1.0-ab194a9
+    imageTag: latest
     configMap: notification
     strategy:
       type: RollingUpdate
