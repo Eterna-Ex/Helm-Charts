@@ -10,7 +10,7 @@ wallet-service:
     name: wallet
     replicas: 1
     imageRepository: 767398111444.dkr.ecr.eu-west-1.amazonaws.com/wallet-event-service
-    imageTag: 0.1.0-0dc8e0f
+    imageTag: v1-latest
     configMap: wallet
     strategy:
       type: RollingUpdate
