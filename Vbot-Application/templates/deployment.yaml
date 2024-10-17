@@ -32,11 +32,11 @@ spec:
             name: {{ .Values.Deployment.configMap }}
         resources:
           limits:
-            cpu: {{ default "1" .Values.Deployment.limitCpu }}
-            memory: {{ default "512Mi" .Values.Deployment.limitMem }}
+            cpu: {{ default "1.5" .Values.Deployment.limitCpu }}
+            memory: {{ default "1024Mi" .Values.Deployment.limitMem }}
           requests:
-            cpu: {{ default "0.5" .Values.Deployment.requestCpu }}
-            memory: {{ default "256Mi" .Values.Deployment.requestMem }}
+            cpu: {{ default "1" .Values.Deployment.requestCpu }}
+            memory: {{ default "512Mi" .Values.Deployment.requestMem }}
 {{- if .Values.Deployment.expose.enabled }}
         ports:
 {{- range .Values.Deployment.expose.ports }}
