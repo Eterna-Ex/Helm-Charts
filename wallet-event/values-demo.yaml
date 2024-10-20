@@ -24,7 +24,7 @@ wallet-service:
         # Health Check
     healthCheck:
       enabled: true
-      path: /wallet/health
+      path: /event/health
       port: 8005
       # Expose Deployment Details
     expose:
