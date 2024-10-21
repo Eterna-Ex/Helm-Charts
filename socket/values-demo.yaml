@@ -35,4 +35,4 @@ socket-service:
   service:
     enabled: true
   hpa:
-    enabled: true
+    enabled: false
