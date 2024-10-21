@@ -10,5 +10,5 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: {{ .Values.Deployment.name }}
-  targetCPUUtilizationPercentage: {{ default 60 .Values.hpa.cpuTarget }}
+  targetCPUUtilizationPercentage: {{ default 90 .Values.hpa.cpuTarget }}
 {{- end }}
