@@ -10,7 +10,7 @@ socket-service:
     name: socket
     replicas: 1
     imageRepository: 767398111444.dkr.ecr.eu-west-1.amazonaws.com/socket-service-v2-to-v5
-    imageTag: 0.1.0-d6980db
+    imageTag: 0.1.0-4634635
     configMap: socket
     limitMem: "4096Mi"
     limitCpu: "2"
