@@ -10,7 +10,7 @@ wallet-service:
     name: wallet
     replicas: 1
     imageRepository: 767398111444.dkr.ecr.eu-west-1.amazonaws.com/wallet-event-service
-    imageTag: v7-latest
+    imageTag: v8-latest
     configMap: wallet
     limitCpu: "2"      
     limitMem: "2048Mi" 
