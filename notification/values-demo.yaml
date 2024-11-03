@@ -27,6 +27,7 @@ notification-service:
       enabled: true
       ports:
         - port: 8003
+          servicePort: 80
         - port: 8803
   service:
     enabled: true

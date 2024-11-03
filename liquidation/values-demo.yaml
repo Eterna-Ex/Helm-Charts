@@ -27,6 +27,7 @@ liquidation-service:
       enabled: true
       ports:
         - port: 8002
+          servicePort: 80
         - port: 8802
   service:
     enabled: true

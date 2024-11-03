@@ -31,6 +31,7 @@ wallet-service:
       enabled: true
       ports:
         - port: 8005
+          servicePort: 80
         - port: 8805
   service:
     enabled: true

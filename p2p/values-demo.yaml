@@ -27,6 +27,7 @@ ptop-service:
       enabled: true
       ports:
         - port: 8008
+          servicePort: 80
         - port: 8808
   service:
     enabled: true
