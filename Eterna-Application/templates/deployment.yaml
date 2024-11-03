@@ -23,8 +23,8 @@ spec:
       labels:
         app: {{ .Values.Deployment.name }}
         version: {{ default "v1" .Values.Deployment.version }}
+        sidecar.istio.io/inject: 'true'
     spec:
-      hostNetwork: true
       containers:
       - name: {{ .Values.Deployment.name }}
         image: "{{ .Values.Deployment.imageRepository }}:{{ .Values.Deployment.imageTag }}"
