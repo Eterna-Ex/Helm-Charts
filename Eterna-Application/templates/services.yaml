@@ -13,10 +13,10 @@ spec:
   type: {{ default "ClusterIP" .Values.service.serviceType }}
   ports:
 {{- range .Values.Deployment.expose.ports }}
-  - name: "tcp-{{ .port }}"
-    targetPort: {{ .port }}
+    - name: "tcp-{{ .port }}"
+      port: {{ .servicePort | default .port }}
+      targetPort: {{ .port }}
 {{- end }}
-    port: 80
   selector:
     app: {{ .Values.Deployment.name }}
 {{- end }}
