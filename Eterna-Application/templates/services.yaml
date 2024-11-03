@@ -14,8 +14,9 @@ spec:
   ports:
 {{- range .Values.Deployment.expose.ports }}
   - name: "tcp-{{ .port }}"
-    port: {{ .port }}
+    targetPort: {{ .port }}
 {{- end }}
+    port: 80
   selector:
     app: {{ .Values.Deployment.name }}
 {{- end }}
